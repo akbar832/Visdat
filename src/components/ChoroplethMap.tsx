@@ -67,9 +67,6 @@ export default function ChoroplethMap({ data, title, subtitle }: ChoroplethMapPr
       });
   }, []);
 
-  // Create lookup map for faster data access
-  const dataMap = new Map(data.map((d) => [d.localAuthorityId, d]));
-
   // Get value range for color scaling
   const maxValue = Math.max(...data.map((d) => d.totalBenefit));
   const minValue = Math.min(...data.map((d) => d.totalBenefit));

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import HeroSection from "../sections/HeroSection";
 
 export default function HomePage() {
@@ -68,7 +67,7 @@ export default function HomePage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <Link key={feature.title} to={feature.link} className="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-[#00718f] hover:shadow-lg transition-all">
               <div className="text-[#00718f] mb-4">{feature.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-1">{feature.title}</h3>
